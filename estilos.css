@@ -1,0 +1,270 @@
+
+/* 1. Diseño general */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f1f5f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 2. Encabezado */
+header {
+    background: linear-gradient(135deg, #173b68, #2874a6);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+}
+
+header p {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* 3. Menú de navegación */
+nav {
+    background-color: #123052;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #2874a6;
+}
+
+/* 4. Contenido principal */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* 5. Secciones */
+section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+section h2 {
+    color: #173b68;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* 6. Tarjetas de servicios */
+
+/* Organizar los servicios con CSS Grid */
+#servicios .container > .row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Quitar el ancho de columna de Bootstrap */
+#servicios .container > .row > div {
+    width: 100%;
+    padding: 0;
+}
+
+/* Adaptar las tarjetas a pantallas pequeñas */
+@media (max-width: 768px) {
+    #servicios .container > .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    border: 1px solid #dbe3ec;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px #00000018;
+}
+
+.card-title {
+    color: #24558a;
+    font-size: 21px;
+}
+
+/* 7. Formulario */
+.form-label {
+    font-weight: bold;
+    color: #173b68;
+}
+
+.form-control,
+.form-select {
+    padding: 11px;
+    border-radius: 7px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #2874a6;
+    box-shadow: 0 0 0 3px #2874a633;
+}
+
+/* 8. Botón de registro */
+.btn-primary {
+    background-color: #24558a;
+    border-color: #24558a;
+    padding: 11px 22px;
+    border-radius: 7px;
+}
+
+.btn-primary:hover {
+    background-color: #173b68;
+    border-color: #173b68;
+}
+
+/* 9. Mensaje de JavaScript */
+#mensajeFormulario {
+    font-weight: bold;
+}
+
+/* 10. Pie de página */
+footer {
+    background-color: #123052;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 11. Adaptación para celulares */
+@media (max-width: 600px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Resumen del registro */
+#resumenRegistro {
+    background-color: #eef6ff;
+    border: 1px solid #b8d5f5;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#resumenRegistro h3 {
+    color: #173b68;
+    margin-top: 0;
+    font-size: 21px;
+}
+
+#resumenRegistro p {
+    margin-bottom: 8px;
+}
+
+
+
+/* Accesibilidad: destacar los elementos seleccionados */
+nav a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a.btn:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+/* Evitar que los enlaces queden tapados al navegar */
+section {
+    scroll-margin-top: 20px;
+}
+
+
+
+
+/* Resultados de la consulta de servicios */
+#resultadoConsulta {
+    margin-top: 20px;
+}
+
+#resultadoConsulta h3 {
+    color: #173b68;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.lista-servicios {
+    padding: 0;
+    list-style: none;
+}
+
+.lista-servicios li {
+    background-color: #f1f5f9;
+    border-left: 4px solid #2874a6;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 5px;
+}
+
+.mensaje-consulta {
+    color: #176534;
+    font-weight: bold;
+    margin-top: 15px;
+}
