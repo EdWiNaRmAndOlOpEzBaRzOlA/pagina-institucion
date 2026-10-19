@@ -268,3 +268,22 @@ section {
     font-weight: bold;
     margin-top: 15px;
 }
+
+/* Imagen de estudiantes en la sección de inicio */
+.imagen-laboratorio {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    object-fit: cover;
+    margin: 25px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 576px) {
+    .imagen-laboratorio {
+        height: 230px;
+        margin: 18px auto;
+    }
+}
