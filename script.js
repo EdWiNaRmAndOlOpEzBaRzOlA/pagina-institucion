@@ -37,11 +37,26 @@ formulario.addEventListener("submit", function(evento) {
     resumen.hidden = false;
 
     // Mostrar los datos en la consola
-    console.log("Datos del registro:");
-    console.log("Nombres:", nombres);
-    console.log("Correo:", correo);
-    console.log("Teléfono:", telefono);
-    console.log("Servicio:", servicio);
+    
+    // Simular una solicitud POST
+    const datosRegistro = {
+        nombres: nombres,
+        correo: correo,
+        telefono: telefono,
+        servicio: servicio
+    };
+
+    console.log("Simulación de solicitud POST");
+    console.log("Datos enviados:", datosRegistro);
+
+    // Simular una respuesta del servidor
+    const respuestaServidor = {
+        correcto: true,
+        mensaje: "La solicitud fue recibida correctamente."
+    };
+
+    console.log("Respuesta simulada:", respuestaServidor);
+
 
     // Limpiar el formulario
     formulario.reset();
